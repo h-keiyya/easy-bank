@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Public Sans", sans-serif;
+}
+
+.btn {
+  @apply bg-gradient-to-r from-limeGreen to-brightCyan  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full;
+}
+
+#header {
+  background: url("../src/assets/images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 65%;
+}
+
+.flex-center {
+  @apply flex flex-col items-center md:items-start;
+}
+
+.list-items:hover {
+  @apply text-limeGreen cursor-pointer;
+}
+
+@media (min-width: 768px) {
+  #header {
+    background: url("../src/assets/images/bg-intro-desktop.svg");
+    background-position: 135% 70%;
+    background-size: 69% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 960px) {
+  #header {
+    background-position: 150% 30%;
+    background-size: 75% 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  #header {
+    background-position: 180% 70%;
+    background-size: 80% 150%;
+  }
+}
